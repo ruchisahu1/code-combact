@@ -1,0 +1,67 @@
+# CodeRover - Python Learning Game
+
+## What We're Building
+A game where students learn Python by coding a Mars rover. No database, no auth for now - just the core game.
+
+## Tech Stack
+- Next.js 14 + TypeScript
+- Phaser 3 (game engine)
+- Monaco Editor (code editor)
+- Pyodide (runs Python in browser)
+- LocalStorage (save progress)
+- Tailwind CSS
+
+## Important Rules
+
+### File Organization
+- All components need 'use client' at the top
+- Types go in `lib/game/types.ts`
+- Game logic in `lib/game/`
+- UI components in `components/`
+- LocalStorage helpers in `lib/utils/storage.ts`
+
+### Code Style
+- Use TypeScript strictly (no `any`)
+- Always wrap localStorage in try-catch
+- Keep components small and focused
+- Add error handling everywhere
+- Use clear, descriptive names
+
+### LocalStorage Keys
+```typescript
+coderover:progress          // All level progress
+coderover:level:{id}:code   // Saved code per level
+coderover:settings          // User settings
+```
+
+### Game Data Flow
+1. User writes Python code
+2. Pyodide executes it → returns commands
+3. Phaser animates the rover
+4. Check if level complete
+5. Save to localStorage
+
+### Common Mistakes to Avoid
+- ❌ Forgetting 'use client' directive
+- ❌ Not handling localStorage errors
+- ❌ Putting game logic inside React components
+- ❌ Using database/API code (we don't have backend yet)
+
+### Before Writing Code
+1. Check if similar code exists
+2. Read the relevant doc in docs/
+3. Write types first
+4. Then implement
+
+### Testing
+Always test:
+- Code runs without errors
+- LocalStorage saves correctly
+- Works after page refresh
+- Handles missing data gracefully
+
+## File Naming
+- Files: `kebab-case.tsx`
+- Components: `PascalCase`
+- Functions: `camelCase`
+- Constants: `UPPER_SNAKE_CASE`
