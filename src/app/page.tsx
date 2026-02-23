@@ -45,8 +45,8 @@ export default function Home() {
       <header className="hero">
         <div className="hero-badge">🐍 Learn Python Through Adventure</div>
         <h1 className="title">
-          <span className="title-code">Code</span>
-          <span className="title-combat">Combat</span>
+          <span className="title-code">Game</span>
+          <span className="title-combat"> Coder</span>
         </h1>
         <p className="tagline">
           Write real Python code to guide your hero through dungeons, defeat monsters, and collect treasures.
