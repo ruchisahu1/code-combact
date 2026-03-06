@@ -138,9 +138,6 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="footer">
-        <p>⚔️ CodeCombat - Learn to code through epic adventures</p>
-      </footer>
 
       <style jsx>{`
         .home-page {
